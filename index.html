@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rachit Sethi — AI/ML Engineer</title>
+<meta name="description" content="Rachit Sethi builds AI systems: agentic AI workflows, RAG and LLM infrastructure.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;family=Caveat:wght@500;600&amp;family=Instrument+Serif:ital@0;1&amp;family=Bricolage+Grotesque:opsz,wght@12..96,500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0A0B0D}
+html{scroll-behavior:smooth}
+a{color:#E8E9EB;text-decoration:none;transition:color .2s,border-color .2s,background-color .2s}a:hover{color:#ffffff}
+button{font:inherit;cursor:pointer}
+.wrap{max-width:1200px;margin:0 auto;padding:0 40px;box-sizing:border-box}
+.hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,0.9fr);gap:56px;align-items:center}
+.story{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,0.95fr);gap:56px;align-items:start}
+.stick{position:sticky;top:88px}
+.node{transition:border-color .35s,background-color .35s,color .35s}
+.step{transition:color .3s,border-color .3s}
+.lane:hover,.lane:focus-visible{border-color:#3A3F47}
+a:focus-visible,button:focus-visible{outline:2px solid #8FE3C0;outline-offset:3px}
+.note{font-family:'Caveat',cursive;font-size:24px;line-height:1.15;color:#F2C46D;display:inline-block;transform:rotate(-2deg)}
+.note.r{transform:rotate(1.5deg)}
+h1,h2{font-family:'Instrument Serif',Georgia,serif !important;font-weight:400 !important;letter-spacing:-0.01em !important}
+h1 em,h2 em{font-style:italic}
+.idxrow > span:nth-child(2){font-family:'Instrument Serif',Georgia,serif !important;font-weight:400 !important;letter-spacing:-0.005em !important}
+h3,.step > span:nth-child(2),.sub{font-family:'Bricolage Grotesque','Geist',sans-serif !important;font-weight:600 !important;letter-spacing:-0.015em !important}
+.ann{display:flex;justify-content:flex-end;padding:6px 8px 0}
+@media (min-width:901px) and (max-height:940px){.stick{zoom:.86;top:102px}}
+@media (min-width:901px) and (max-height:800px){.stick{zoom:.74;top:118px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.node,.step{transition:none}}
+@media (max-width:900px){
+.wrap{padding:0 20px}
+.hero,.story{grid-template-columns:minmax(0,1fr);gap:40px}
+.stick{position:static}
+.hide-sm{display:none !important}
+.idxrow{grid-template-columns:44px minmax(0,1fr) !important}
+.idxmeta{grid-column:2;justify-self:start !important;flex-wrap:wrap;gap:4px 12px !important}
+[style*="grid-template-columns: 112px 1fr"],[style*="grid-template-columns: 124px 1fr"]{grid-template-columns:minmax(0,1fr) !important;gap:6px !important}
+.story [style*="height: 38px"]{height:auto !important;min-height:38px;padding:6px 8px;text-align:center;box-sizing:border-box}
+.story [style*="top: -9px; right: 16px"]{font-size:9px !important;letter-spacing:0 !important;white-space:nowrap}
+}
+</style>
+
+</head>
+<body>
+
+<div id="top" style="background-color: #0C0C0B; color: #ECEAE4; font-family: 'Geist', 'Helvetica Neue', Helvetica, sans-serif; min-height: 100vh">
+
+<header style="position: sticky; top: 0; z-index: 10; background: rgba(10,11,13,0.88); backdrop-filter: blur(8px); border-bottom: 1px solid #1F2227">
+<div class="wrap" style="height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 24px">
+<a href="#top" style="display: flex; align-items: center; gap: 12px; font-weight: 500; font-size: 15px"><span style="width: 26px; height: 26px; border: 1px solid #3A3F47; display: flex; align-items: center; justify-content: center; font-family: 'Geist Mono', monospace; font-size: 11px">RS</span>Rachit Sethi</a>
+<nav class="hide-sm" style="display: flex; gap: 32px; font-size: 14px">
+<a href="#work" style="" data-base="" data-h="nav.work">Work</a>
+<a href="#experience" style="" data-base="" data-h="nav.experience">Experience</a>
+<a href="#about" style="" data-base="" data-h="nav.about">About</a>
+<a href="#contact" style="" data-base="" data-h="nav.contact">Contact</a>
+</nav>
+<a href="https://drive.google.com/file/d/12Ax5gaaJXUf13kfrs5dQncvUs3k4KgEm/view?usp=drive_link" style="height: 36px; padding: 0 14px; display: flex; align-items: center; border: 1px solid #2A2E35; border-radius: 6px; font-size: 13px">Resume ↗</a>
+</div>
+</header>
+
+<section class="wrap" style="padding-top: 96px; padding-bottom: 72px">
+<div class="hero">
+<div style="display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; flex-direction: column; gap: 8px; font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.08em">
+<span>RACHIT SETHI</span>
+<span style="color: #8B9099">AI/ML ENGINEER — AI SYSTEMS • RAG • AGENTIC AI • SOFTWARE</span>
+</div>
+<h1 style="margin: 0; font-size: clamp(46px, 6.2vw, 76px); line-height: 1.02; font-weight: 500; letter-spacing: -0.03em; text-wrap: balance">Hi, I'm Rachit. I build <em>AI systems</em> <span style="color: #8B9099">— and then check whether they actually work.</span></h1>
+<p style="margin: 0; max-width: 540px; font-size: 17px; line-height: 1.6; color: #A9AEB6">I build LLM-agent systems — agentic workflows with human-in-the-loop guardrails, RAG pipelines, model routing and the evaluation harnesses that keep them honest — in Python and FastAPI.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center">
+<a href="#work" style="height: 46px; padding: 0 22px; display: flex; align-items: center; background: #E8E9EB; color: #0A0B0D; border-radius: 6px; font-weight: 500; font-size: 14px">View work ↓</a>
+<span class="note" style="font-size: 22px; transform: rotate(-4deg)">↙ start here</span>
+<a href="https://drive.google.com/file/d/12Ax5gaaJXUf13kfrs5dQncvUs3k4KgEm/view?usp=drive_link" style="height: 46px; padding: 0 22px; display: flex; align-items: center; border: 1px solid #2A2E35; border-radius: 6px; font-size: 14px">Resume</a>
+<div style="display: flex; gap: 20px; padding-left: 8px; font-family: 'Geist Mono', monospace; font-size: 12px">
+<a href="https://github.com/RachitSethi2455" style="color: #8B9099">GitHub ↗</a>
+<a href="https://www.linkedin.com/in/rachit-sethi-2455d" style="color: #8B9099">LinkedIn ↗</a>
+<a href="mailto:rachitsethi2455@gmail.com" style="color: #8B9099">Email ↗</a>
+</div>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 10px">
+<span class="note r" style="align-self: flex-end; margin-right: 12px">the three things I spend most of my time on ↓</span>
+<div style="border: 1px solid #23262B; border-radius: 10px; background: #0F1114; display: flex; flex-direction: column">
+<div style="height: 42px; padding: 0 18px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #23262B; font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: #8B9099"><span>WHAT I BUILD</span><span class="hide-sm">3 SYSTEMS</span></div>
+<div style="padding: 18px; display: flex; flex-direction: column; gap: 12px; font-family: 'Geist Mono', monospace; font-size: 12px">
+<a href="#p01" class="lane" data-enter="hoverA" data-leave="hoverOff" style="border: 1px solid #23262B; border-radius: 8px; padding: 14px; display: flex; flex-direction: column; gap: 12px" data-base="border: 1px solid #23262B; border-radius: 8px; padding: 14px; display: flex; flex-direction: column; gap: 12px" data-h="lane.a">
+<span style="display: flex; justify-content: space-between; color: #8B9099; font-size: 11px"><span><span style="color: #8FE3C0">01</span> · AGENTIC WORKFLOW</span><span>DELOITTE</span></span>
+<span style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap"><span style="padding: 8px 10px; border: 1px solid #3A3F47; border-radius: 5px">report</span><span style="color: #4B5059">→</span><span style="padding: 8px 10px; border: 1px solid #3A3F47; border-radius: 5px">match case</span><span style="color: #4B5059">→</span><span style="padding: 8px 10px; border: 1px solid #3A3F47; border-radius: 5px">enrich from KB</span></span>
+</a>
+<a href="#p02" class="lane" data-enter="hoverB" data-leave="hoverOff" style="border: 1px solid #23262B; border-radius: 8px; padding: 14px; display: flex; flex-direction: column; gap: 12px" data-base="border: 1px solid #23262B; border-radius: 8px; padding: 14px; display: flex; flex-direction: column; gap: 12px" data-h="lane.b">
+<span style="display: flex; justify-content: space-between; color: #8B9099; font-size: 11px"><span><span style="color: #E8E9EB">02</span> · RETRIEVAL</span><span>CHRONO RAG</span></span>
+<span style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap"><span style="padding: 8px 10px; border: 1px solid #3A3F47; border-radius: 5px">query</span><span style="color: #4B5059">→</span><span style="padding: 8px 10px; border: 1px solid #3A3F47; border-radius: 5px">retrieve · recency</span><span style="color: #4B5059">→</span><span style="padding: 8px 10px; border: 1px solid #3A3F47; border-radius: 5px">grounded answer</span></span>
+</a>
+<a href="#p03" class="lane" data-enter="hoverC" data-leave="hoverOff" style="border: 1px solid #23262B; border-radius: 8px; padding: 14px; display: flex; flex-direction: column; gap: 12px" data-base="border: 1px solid #23262B; border-radius: 8px; padding: 14px; display: flex; flex-direction: column; gap: 12px" data-h="lane.c">
+<span style="display: flex; justify-content: space-between; color: #8B9099; font-size: 11px"><span><span style="color: #E8E9EB">03</span> · MODEL ROUTING</span><span>ROUTER</span></span>
+<span style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap"><span style="padding: 8px 10px; border: 1px solid #3A3F47; border-radius: 5px">compute or route</span><span style="color: #4B5059">→</span><span style="padding: 8px 10px; border: 1px solid #3A3F47; border-radius: 5px">small | large</span><span style="color: #4B5059">→</span><span style="padding: 8px 10px; border: 1px solid #3A3F47; border-radius: 5px">escalate if needed</span></span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="wrap" style="padding-bottom: 72px">
+<div style="border-top: 1px dashed #3A3F47; border-bottom: 1px dashed #3A3F47; padding: 26px 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 18px 40px; align-items: start">
+<span class="note" style="font-size: 30px">now —</span>
+<span style="font-size: 15px; line-height: 1.6; color: #C9C6BE">Final year of my B.Tech in CS (AI/ML).</span>
+<span style="font-size: 15px; line-height: 1.6; color: #C9C6BE">Building Chrono RAG with my team — the retrieval design is in progress.</span>
+<span style="font-size: 15px; line-height: 1.6; color: #C9C6BE">Router now beats random routing on its own traffic — next, a fresh test set.</span>
+<span style="font-size: 15px; line-height: 1.6; color: #C9C6BE">Looking for AI/ML and AI systems engineering roles.</span>
+</div>
+</section>
+
+<section id="work" data-sec="work" class="wrap" style="padding-bottom: 40px">
+<div style="display: flex; justify-content: space-between; align-items: baseline; padding-bottom: 14px; border-bottom: 1px solid #2A2E35; font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.08em; color: #8B9099"><span>selected work</span><span>three I'd talk about in an interview</span></div>
+<div class="ann" style="justify-content: flex-start; padding-left: 72px"><span class="note" style="font-size: 21px">click any of these ↓</span></div>
+<a href="#p01" class="idxrow" style="display: grid; grid-template-columns: 72px minmax(0,1fr) auto; gap: 16px; align-items: baseline; padding: 22px 0; border-bottom: 1px solid #1F2227">
+<span style="font-family: 'Geist Mono', monospace; font-size: 13px; color: #8FE3C0">01</span>
+<span style="font-size: clamp(30px, 4.6vw, 58px); line-height: 1; font-weight: 500; letter-spacing: -0.035em">Adverse Event Reporting System</span>
+<span class="idxmeta" style="justify-self: end; display: flex; gap: 14px; font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: #8B9099"><span>DELOITTE</span><span style="color: #8FE3C0">● COMPLETED</span></span>
+</a>
+<div class="ann"><span class="note r" style="font-size: 21px">↑ real enterprise work</span></div>
+<a href="#p02" class="idxrow" style="display: grid; grid-template-columns: 72px minmax(0,1fr) auto; gap: 16px; align-items: baseline; padding: 18px 0; border-bottom: 1px solid #1F2227">
+<span style="font-family: 'Geist Mono', monospace; font-size: 13px; color: #8B9099">02</span>
+<span style="font-size: clamp(24px, 3.2vw, 40px); line-height: 1.05; font-weight: 500; letter-spacing: -0.03em">Chrono RAG</span>
+<span class="idxmeta" style="justify-self: end; display: flex; gap: 14px; font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: #8B9099"><span>RECENCY-AWARE RAG</span><span style="color: #E6A75B">◐ IN PROGRESS · AI SYSTEMS</span></span>
+</a>
+<a href="#p03" class="idxrow" style="display: grid; grid-template-columns: 72px minmax(0,1fr) auto; gap: 16px; align-items: baseline; padding: 18px 0; border-bottom: 1px solid #1F2227">
+<span style="font-family: 'Geist Mono', monospace; font-size: 13px; color: #8B9099">03</span>
+<span style="font-size: clamp(24px, 3.2vw, 40px); line-height: 1.05; font-weight: 500; letter-spacing: -0.03em">Cost-Aware Model Router</span>
+<span class="idxmeta" style="justify-self: end; display: flex; gap: 14px; font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: #8B9099"><span>LLM INFRASTRUCTURE</span><span style="color: #E6A75B">◐ IN PROGRESS · AI SYSTEMS</span></span>
+</a>
+<div class="ann"><span class="note" style="font-size: 21px">↑ 02 and 03 are still being built — labelled, not hidden</span></div>
+</section>
+
+<section id="p01" style="margin-top: 96px; background: #0D0E11; border-top: 1px solid #1F2227; border-bottom: 1px solid #1F2227; padding: 96px 0">
+<div class="wrap" style="display: flex; flex-direction: column; gap: 56px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 760px">
+<span style="font-family: 'Geist Mono', monospace; font-size: clamp(88px, 13vw, 168px); line-height: 0.8; color: #1E2A26; letter-spacing: -0.05em">01</span>
+<span style="display: flex; flex-wrap: wrap; gap: 14px; font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.08em; color: #8B9099"><span>DELOITTE USI · ENTERPRISE AI</span><span style="color: #8FE3C0">● COMPLETED</span></span>
+<h2 style="margin: 0; font-size: clamp(36px, 5vw, 60px); line-height: 1.02; font-weight: 500; letter-spacing: -0.035em; text-wrap: balance">Adverse Event Reporting System</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #A9AEB6">An enterprise Agentic AI workflow that ingests adverse event reports, matches each against existing cases, enriches matched cases from a Knowledge Base service, and holds every final case update behind a human approval gate.</p>
+</div>
+<div style="min-width: 260px; display: flex; flex-direction: column; border-top: 1px solid #2A2E35; font-family: 'Geist Mono', monospace; font-size: 12px">
+<div style="display: grid; grid-template-columns: 88px 1fr; gap: 12px; padding: 11px 0; border-bottom: 1px solid #1F2227"><span style="color: #8B9099">ROLE</span><span>AI &amp; Data Intern</span></div>
+<div style="display: grid; grid-template-columns: 88px 1fr; gap: 12px; padding: 11px 0; border-bottom: 1px solid #1F2227"><span style="color: #8B9099">PERIOD</span><span>Jun – Jul 2026 · Gurugram</span></div>
+<div style="display: grid; grid-template-columns: 88px 1fr; gap: 12px; padding: 11px 0; border-bottom: 1px solid #1F2227"><span style="color: #8B9099">FOCUS</span><span>Agentic AI · RAG · Knowledge base · Human-in-the-loop</span></div>
+<div style="display: grid; grid-template-columns: 88px 1fr; gap: 12px; padding: 11px 0; border-bottom: 1px solid #1F2227"><span style="color: #8B9099">MY PART</span><span>Implementation planning · technical documentation</span></div>
+<span class="note r" style="font-size: 21px; padding-top: 8px">↑ my part — not the whole project</span>
+</div>
+</div>
+
+<div class="story">
+<div class="stick" style="border: 1px solid #23262B; border-radius: 10px; background: #0F1114; padding: 28px; display: flex; flex-direction: column; align-items: center; font-family: 'Geist Mono', monospace; font-size: 12px">
+<span style="align-self: stretch; display: flex; justify-content: space-between; padding-bottom: 20px; font-size: 11px; letter-spacing: 0.08em; color: #8B9099"><span>FIG. 01 — WORKFLOW</span><span style="color: #8FE3C0">STEP <span data-t="s1n"></span> / 4</span></span>
+<span class="node" style="width: 100%; max-width: 260px; height: 42px; border: 1px solid; border-radius: 6px; display: flex; align-items: center; justify-content: center" data-base="width: 100%; max-width: 260px; height: 42px; border: 1px solid; border-radius: 6px; display: flex; align-items: center; justify-content: center" data-h="d.rep">adverse event report</span>
+<span style="width: 1px; height: 20px; background: #3A3F47"></span>
+<div class="node" style="width: 100%; box-sizing: border-box; border: 1px dashed; border-radius: 10px; padding: 26px 16px 20px; display: flex; flex-direction: column; align-items: center; position: relative" data-base="width: 100%; box-sizing: border-box; border: 1px dashed; border-radius: 10px; padding: 26px 16px 20px; display: flex; flex-direction: column; align-items: center; position: relative" data-h="d.retry">
+<span style="position: absolute; top: -9px; right: 16px; background: #0F1114; padding: 0 8px; font-size: 10px; letter-spacing: 0.06em">RETRY + EXCEPTION HANDLING · ≤ 3 ATTEMPTS</span>
+<span class="node" style="width: 100%; max-width: 260px; height: 42px; border: 1px solid; border-radius: 6px; display: flex; align-items: center; justify-content: center" data-base="width: 100%; max-width: 260px; height: 42px; border: 1px solid; border-radius: 6px; display: flex; align-items: center; justify-content: center" data-h="d.wf">agentic AI workflow</span>
+<span style="width: 1px; height: 18px; background: #3A3F47"></span>
+<span class="node" style="width: 100%; max-width: 260px; height: 42px; border: 1px solid; border-radius: 6px; display: flex; align-items: center; justify-content: center" data-base="width: 100%; max-width: 260px; height: 42px; border: 1px solid; border-radius: 6px; display: flex; align-items: center; justify-content: center" data-h="d.cid">case identification</span>
+<span style="width: 1px; height: 18px; background: #3A3F47"></span>
+<span class="node" style="width: 168px; height: 72px; clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); display: flex; align-items: center; justify-content: center" data-base="width: 168px; height: 72px; clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); display: flex; align-items: center; justify-content: center" data-h="d.dec">existing case?</span>
+<span style="width: 50%; height: 1px; background: #3A3F47"></span>
+<div style="width: 100%; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px">
+<div style="display: flex; flex-direction: column; align-items: center">
+<span style="width: 1px; height: 16px; background: #3A3F47"></span>
+<span style="font-size: 10px; padding: 4px 0" data-base="font-size: 10px; padding: 4px 0" data-h="d.yes">YES</span>
+<span class="node" style="width: 100%; height: 38px; border: 1px solid; border-radius: 6px; display: flex; align-items: center; justify-content: center" data-base="width: 100%; height: 38px; border: 1px solid; border-radius: 6px; display: flex; align-items: center; justify-content: center" data-h="d.kb">knowledge base</span>
+<span style="width: 1px; height: 14px; background: #3A3F47"></span>
+<span class="node" style="width: 100%; height: 38px; border: 1px solid; border-radius: 6px; display: flex; align-items: center; justify-content: center" data-base="width: 100%; height: 38px; border: 1px solid; border-radius: 6px; display: flex; align-items: center; justify-content: center" data-h="d.info">relevant information</span>
+<span style="width: 1px; height: 14px; background: #3A3F47"></span>
+<span class="node" style="width: 100%; height: 38px; border: 1px solid; border-radius: 6px; display: flex; align-items: center; justify-content: center" data-base="width: 100%; height: 38px; border: 1px solid; border-radius: 6px; display: flex; align-items: center; justify-content: center" data-h="d.enr">case enrichment</span>
+</div>
+<div style="display: flex; flex-direction: column; align-items: center">
+<span style="width: 1px; height: 16px; background: #3A3F47"></span>
+<span style="font-size: 10px; padding: 4px 0; color: #8B9099">NO</span>
+<span style="width: 10px; height: 10px; border: 1px solid #3A3F47; border-radius: 50%"></span>
+</div>
+</div>
+</div>
+<span style="width: 1px; height: 20px; background: #3A3F47"></span>
+<span class="node" style="width: 100%; max-width: 260px; height: 50px; border: 1px solid; border-radius: 6px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px" data-base="width: 100%; max-width: 260px; height: 50px; border: 1px solid; border-radius: 6px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px" data-h="d.hitl"><span>human approval gate</span><span style="font-size: 10px; opacity: 0.85">human-in-the-loop</span></span>
+<span class="note" style="font-size: 21px; padding: 4px 0 2px">↑ the box that matters most</span>
+<span style="width: 1px; height: 18px; background: #3A3F47"></span>
+<span class="node" style="width: 100%; max-width: 260px; height: 42px; border: 1px solid; border-radius: 6px; display: flex; align-items: center; justify-content: center" data-base="width: 100%; max-width: 260px; height: 42px; border: 1px solid; border-radius: 6px; display: flex; align-items: center; justify-content: center" data-h="d.out">final case update</span>
+</div>
+
+<div style="display: flex; flex-direction: column">
+<button type="button" data-story="1-0" data-click="p1s0" class="step" style="text-align: left; background: transparent; border: none; border-top: 1px solid #2A2E35; padding: 28px 0 72px; display: flex; flex-direction: column; gap: 10px; color: inherit" data-base="text-align: left; background: transparent; border: none; border-top: 1px solid #2A2E35; padding: 28px 0 72px; display: flex; flex-direction: column; gap: 10px; color: inherit" data-h="t1.a"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.08em" data-base="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.08em" data-h="t1.na">01 — INTAKE</span><span style="font-size: 26px; font-weight: 500; letter-spacing: -0.02em">A report enters the agentic workflow.</span><span style="font-size: 16px; line-height: 1.65">Each adverse event report is picked up by an Agentic AI workflow rather than a fixed script, so the processing can reason about what the report contains.</span></button>
+<button type="button" data-story="1-1" data-click="p1s1" class="step" style="text-align: left; background: transparent; border: none; border-top: 1px solid #2A2E35; padding: 28px 0 72px; display: flex; flex-direction: column; gap: 10px; color: inherit" data-base="text-align: left; background: transparent; border: none; border-top: 1px solid #2A2E35; padding: 28px 0 72px; display: flex; flex-direction: column; gap: 10px; color: inherit" data-h="t1.b"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.08em" data-base="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.08em" data-h="t1.nb">02 — MATCH</span><span style="font-size: 26px; font-weight: 500; letter-spacing: -0.02em">Find the case it belongs to.</span><span style="font-size: 16px; line-height: 1.65">The workflow matches each report against existing adverse event cases and routes it downstream for further processing. A matched case continues to enrichment.</span></button>
+<button type="button" data-story="1-2" data-click="p1s2" class="step" style="text-align: left; background: transparent; border: none; border-top: 1px solid #2A2E35; padding: 28px 0 72px; display: flex; flex-direction: column; gap: 10px; color: inherit" data-base="text-align: left; background: transparent; border: none; border-top: 1px solid #2A2E35; padding: 28px 0 72px; display: flex; flex-direction: column; gap: 10px; color: inherit" data-h="t1.c"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.08em" data-base="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.08em" data-h="t1.nc">03 — ENRICH</span><span style="font-size: 26px; font-weight: 500; letter-spacing: -0.02em">Pull context from the Knowledge Base.</span><span style="font-size: 16px; line-height: 1.65">For a matched case, the workflow calls a separate Knowledge Base service, retrieves the relevant context and attaches it to the case — retrieval-augmented enrichment.</span></button>
+<button type="button" data-story="1-3" data-click="p1s3" class="step" style="text-align: left; background: transparent; border: none; border-top: 1px solid #2A2E35; padding: 28px 0 40px; display: flex; flex-direction: column; gap: 10px; color: inherit" data-base="text-align: left; background: transparent; border: none; border-top: 1px solid #2A2E35; padding: 28px 0 40px; display: flex; flex-direction: column; gap: 10px; color: inherit" data-h="t1.d"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.08em" data-base="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.08em" data-h="t1.nd">04 — RECOVER &amp; APPROVE</span><span style="font-size: 26px; font-weight: 500; letter-spacing: -0.02em">Automated, but auditable.</span><span style="font-size: 16px; line-height: 1.65">A retry and exception-handling layer allows up to three attempts, and a human-in-the-loop approval gate sits before any final case update — so every automated action can be reviewed.</span></button>
+</div>
+</div>
+</div>
+</section>
+
+<section id="p02" class="wrap" style="padding-top: 128px; display: flex; flex-direction: column; gap: 48px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px">
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 720px">
+<span style="font-family: 'Geist Mono', monospace; font-size: clamp(64px, 9vw, 112px); line-height: 0.8; color: #23262B; letter-spacing: -0.05em">02</span>
+<span style="display: flex; flex-wrap: wrap; gap: 14px; font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.08em; color: #8B9099"><span style="color: #E6A75B">◐ IN PROGRESS · AI SYSTEMS</span><span>TEAM PROJECT</span></span>
+<span class="note" style="font-size: 21px">built as a team of four</span>
+<h2 style="margin: 0; font-size: clamp(32px, 4vw, 48px); line-height: 1.05; font-weight: 500; letter-spacing: -0.03em">Chrono RAG</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #A9AEB6">A recency-aware hybrid RAG framework over RBI Master Circulars. Regulatory guidance changes over time, so retrieval has to weigh how recent a circular is — not only how relevant it looks.</p>
+<span class="note">still being built — results go here when they're real, not before.</span>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px; max-width: 360px; font-family: 'Geist Mono', monospace; font-size: 11px; color: #A9AEB6">
+<span style="padding: 6px 10px; border: 1px solid #2A2E35; border-radius: 4px">RAG</span>
+<span style="padding: 6px 10px; border: 1px solid #2A2E35; border-radius: 4px">HYBRID RETRIEVAL</span>
+<span style="padding: 6px 10px; border: 1px solid #2A2E35; border-radius: 4px">RECENCY-AWARE</span>
+<span style="padding: 6px 10px; border: 1px solid #2A2E35; border-radius: 4px">RBI MASTER CIRCULARS</span>
+</div>
+</div>
+<div class="story">
+<div class="stick" style="border: 1px solid #23262B; border-radius: 10px; background: #0F1114; padding: 28px; display: flex; flex-direction: column; align-items: center; font-family: 'Geist Mono', monospace; font-size: 12px">
+<span style="align-self: stretch; display: flex; justify-content: space-between; padding-bottom: 20px; font-size: 11px; letter-spacing: 0.08em; color: #8B9099"><span>FIG. 02 — PIPELINE</span><span style="color: #E6A75B">DESIGN UNDER DEVELOPMENT</span></span>
+<span class="node" style="width: 100%; max-width: 240px; height: 40px; border: 1px solid; border-radius: 6px; display: flex; align-items: center; justify-content: center" data-base="width: 100%; max-width: 240px; height: 40px; border: 1px solid; border-radius: 6px; display: flex; align-items: center; justify-content: center" data-h="c.q">user query</span>
+<span style="width: 1px; height: 16px; background: #3A3F47"></span>
+<span class="node" style="width: 100%; max-width: 240px; height: 40px; border: 1px solid; border-radius: 6px; display: flex; align-items: center; justify-content: center" data-base="width: 100%; max-width: 240px; height: 40px; border: 1px solid; border-radius: 6px; display: flex; align-items: center; justify-content: center" data-h="c.qp">query processing</span>
+<span style="width: 1px; height: 16px; background: #3A3F47"></span>
+<div style="width: 100%; display: grid; grid-template-columns: minmax(0,1fr) 28px minmax(0,1.4fr); align-items: center">
+<span class="node" style="height: 58px; border: 1px dashed; border-radius: 6px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; text-align: center" data-base="height: 58px; border: 1px dashed; border-radius: 6px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; text-align: center" data-h="c.corp"><span>corpus</span><span style="font-size: 10px; opacity: 0.85">RBI Master Circulars</span></span>
+<span style="height: 1px; background: #3A3F47"></span>
+<span class="node" style="height: 58px; border: 1px solid; border-radius: 6px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px" data-base="height: 58px; border: 1px solid; border-radius: 6px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px" data-h="c.ret"><span>hybrid retrieval</span><span style="font-size: 10px; opacity: 0.85">recency-aware</span></span>
+</div>
+<span style="width: 1px; height: 16px; background: #3A3F47"></span>
+<span class="node" style="width: 100%; max-width: 240px; height: 40px; border: 1px solid; border-radius: 6px; display: flex; align-items: center; justify-content: center" data-base="width: 100%; max-width: 240px; height: 40px; border: 1px solid; border-radius: 6px; display: flex; align-items: center; justify-content: center" data-h="c.ctx">relevant context</span>
+<span style="width: 1px; height: 16px; background: #3A3F47"></span>
+<span class="node" style="width: 100%; max-width: 240px; height: 40px; border: 1px solid; border-radius: 6px; display: flex; align-items: center; justify-content: center" data-base="width: 100%; max-width: 240px; height: 40px; border: 1px solid; border-radius: 6px; display: flex; align-items: center; justify-content: center" data-h="c.llm">LLM</span>
+<span style="width: 1px; height: 16px; background: #3A3F47"></span>
+<span class="node" style="width: 100%; max-width: 240px; height: 40px; border: 1px solid; border-radius: 6px; display: flex; align-items: center; justify-content: center" data-base="width: 100%; max-width: 240px; height: 40px; border: 1px solid; border-radius: 6px; display: flex; align-items: center; justify-content: center" data-h="c.resp">grounded response</span>
+</div>
+<div style="display: flex; flex-direction: column">
+<button type="button" data-story="2-0" data-click="p2s0" class="step" style="text-align: left; background: transparent; border: none; border-top: 1px solid #2A2E35; padding: 28px 0 64px; display: flex; flex-direction: column; gap: 10px; color: inherit" data-base="text-align: left; background: transparent; border: none; border-top: 1px solid #2A2E35; padding: 28px 0 64px; display: flex; flex-direction: column; gap: 10px; color: inherit" data-h="t2.a"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.08em" data-base="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.08em" data-h="t2.na">01 — QUERY</span><span style="font-size: 24px; font-weight: 500; letter-spacing: -0.02em">A regulatory question comes in.</span><span style="font-size: 16px; line-height: 1.65">The query is processed into a form the retrieval layer can search with.</span></button>
+<button type="button" data-story="2-1" data-click="p2s1" class="step" style="text-align: left; background: transparent; border: none; border-top: 1px solid #2A2E35; padding: 28px 0 64px; display: flex; flex-direction: column; gap: 10px; color: inherit" data-base="text-align: left; background: transparent; border: none; border-top: 1px solid #2A2E35; padding: 28px 0 64px; display: flex; flex-direction: column; gap: 10px; color: inherit" data-h="t2.b"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.08em" data-base="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.08em" data-h="t2.nb">02 — RETRIEVE</span><span style="font-size: 24px; font-weight: 500; letter-spacing: -0.02em">Relevance and recency, together.</span><span style="font-size: 16px; line-height: 1.65">Hybrid retrieval over the RBI Master Circulars, made recency-aware so newer guidance is weighed alongside relevance. This is the part being designed and evaluated now.</span></button>
+<button type="button" data-story="2-2" data-click="p2s2" class="step" style="text-align: left; background: transparent; border: none; border-top: 1px solid #2A2E35; padding: 28px 0 64px; display: flex; flex-direction: column; gap: 10px; color: inherit" data-base="text-align: left; background: transparent; border: none; border-top: 1px solid #2A2E35; padding: 28px 0 64px; display: flex; flex-direction: column; gap: 10px; color: inherit" data-h="t2.c"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.08em" data-base="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.08em" data-h="t2.nc">03 — GENERATE</span><span style="font-size: 24px; font-weight: 500; letter-spacing: -0.02em">Context becomes the answer's source.</span><span style="font-size: 16px; line-height: 1.65">The retrieved passages are passed to the LLM as the context it answers from.</span></button>
+<button type="button" data-story="2-3" data-click="p2s3" class="step" style="text-align: left; background: transparent; border: none; border-top: 1px solid #2A2E35; padding: 28px 0 32px; display: flex; flex-direction: column; gap: 10px; color: inherit" data-base="text-align: left; background: transparent; border: none; border-top: 1px solid #2A2E35; padding: 28px 0 32px; display: flex; flex-direction: column; gap: 10px; color: inherit" data-h="t2.d"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.08em" data-base="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.08em" data-h="t2.nd">04 — GROUND</span><span style="font-size: 24px; font-weight: 500; letter-spacing: -0.02em">An answer tied to the circulars.</span><span style="font-size: 16px; line-height: 1.65">The response stays grounded in the retrieved regulatory text. Results will be published here once the evaluation is complete.</span></button>
+</div>
+</div>
+</section>
+
+<section id="p03" class="wrap" style="padding-top: 128px; display: flex; flex-direction: column; gap: 48px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px">
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 740px">
+<span style="font-family: 'Geist Mono', monospace; font-size: clamp(64px, 9vw, 112px); line-height: 0.8; color: #23262B; letter-spacing: -0.05em">03</span>
+<span style="display: flex; flex-wrap: wrap; gap: 14px; font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.08em; color: #8B9099"><span style="color: #E6A75B">◐ IN PROGRESS · AI SYSTEMS</span><span>LLM INFRASTRUCTURE</span><span style="color: #8FE3C0">● LIVE DEMO</span></span>
+<h2 style="margin: 0; font-size: clamp(32px, 4vw, 48px); line-height: 1.05; font-weight: 500; letter-spacing: -0.03em">Cost-Aware Model Router</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #A9AEB6">Most LLM requests don't need the most expensive model. This router sends each request to a cheap or an expensive model, computes exact answers in a sandbox instead of letting the small model guess, and reports every result with its sample size and a 95% interval.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 20px; font-family: 'Geist Mono', monospace; font-size: 12px"><a href="https://cost-aware-model-router.vercel.app" style="color: #8FE3C0">Live demo ↗</a><a href="https://github.com/RachitSethi2455/cost-aware-model-router" style="color: #8B9099">Code ↗</a><span class="note" style="font-size: 20px; margin-top: -4px">← try it, it's free — the demo makes no model calls</span></div>
+</div>
+<div style="display: flex; border: 1px solid #2A2E35; border-radius: 6px; font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.08em">
+<span style="padding: 14px 18px; border-right: 1px solid #2A2E35">COST</span>
+<span style="padding: 14px 18px; border-right: 1px solid #2A2E35">QUALITY</span>
+<span style="padding: 14px 18px">LATENCY</span>
+</div>
+</div>
+<div class="story">
+<div class="stick" style="border: 1px solid #23262B; border-radius: 10px; background: #0F1114; padding: 28px; display: flex; flex-direction: column; align-items: center; font-family: 'Geist Mono', monospace; font-size: 12px">
+<span style="align-self: stretch; display: flex; justify-content: space-between; padding-bottom: 20px; font-size: 11px; letter-spacing: 0.08em; color: #8B9099"><span>FIG. 03 — REQUEST PATH</span><span>FROM THE REPO</span></span>
+<span class="node" style="width: 100%; max-width: 240px; height: 40px; border: 1px solid; border-radius: 6px; display: flex; align-items: center; justify-content: center" data-base="width: 100%; max-width: 240px; height: 40px; border: 1px solid; border-radius: 6px; display: flex; align-items: center; justify-content: center" data-h="r.q">request</span>
+<span style="width: 1px; height: 16px; background: #3A3F47"></span>
+<span class="node" style="width: 176px; height: 72px; clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); display: flex; align-items: center; justify-content: center; text-align: center" data-base="width: 176px; height: 72px; clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); display: flex; align-items: center; justify-content: center; text-align: center" data-h="r.dec">exact-answer<br>question?</span>
+<div class="node" style="width: 100%; box-sizing: border-box; margin-top: 14px; border: 1px dashed; border-radius: 8px; padding: 18px 14px 14px; display: flex; flex-direction: column; gap: 10px; position: relative" data-base="width: 100%; box-sizing: border-box; margin-top: 14px; border: 1px dashed; border-radius: 8px; padding: 18px 14px 14px; display: flex; flex-direction: column; gap: 10px; position: relative" data-h="r.calc">
+<span style="position: absolute; top: -9px; left: 14px; background: #0F1114; padding: 0 8px; font-size: 10px; letter-spacing: 0.06em">YES → COMPUTE, DON'T GUESS</span>
+<span style="display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap; text-align: center"><span style="padding: 8px 10px; border: 1px solid #3A3F47; border-radius: 5px">small model writes expression</span><span>→</span><span style="padding: 8px 10px; border: 1px solid #3A3F47; border-radius: 5px">sandboxed calculator</span><span>→</span><span style="padding: 8px 10px; border: 1px solid #3A3F47; border-radius: 5px">exact answer</span></span>
+</div>
+<span style="font-size: 10px; padding: 8px 0 4px; color: #8B9099">NO ↓</span>
+<span class="node" style="width: 100%; max-width: 280px; height: 50px; border: 1px solid; border-radius: 6px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px" data-base="width: 100%; max-width: 280px; height: 50px; border: 1px solid; border-radius: 6px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px" data-h="r.fe"><span>feature extraction</span><span style="font-size: 10px; opacity: 0.85">interpretable, no embeddings</span></span>
+<span style="width: 1px; height: 14px; background: #3A3F47"></span>
+<span class="node" style="width: 100%; max-width: 280px; height: 50px; border: 1px solid; border-radius: 6px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px" data-base="width: 100%; max-width: 280px; height: 50px; border: 1px solid; border-radius: 6px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px" data-h="r.ro"><span>outcome router</span><span style="font-size: 10px; opacity: 0.85">additive model · trained on graded outcomes</span></span>
+<span style="width: 1px; height: 14px; background: #3A3F47"></span>
+<span style="width: 50%; height: 1px; background: #3A3F47"></span>
+<div style="width: 100%; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px">
+<div style="display: flex; flex-direction: column; align-items: center">
+<span style="width: 1px; height: 14px; background: #3A3F47"></span>
+<span style="font-size: 10px; padding: 4px 0; color: #8B9099">score &lt; 0.5</span>
+<span class="node" style="width: 100%; height: 44px; border: 1px solid; border-radius: 6px; display: flex; align-items: center; justify-content: center" data-base="width: 100%; height: 44px; border: 1px solid; border-radius: 6px; display: flex; align-items: center; justify-content: center" data-h="r.sm">small model</span>
+<span style="width: 1px; height: 14px; background: #3A3F47"></span>
+<span class="node" style="width: 100%; height: 50px; border: 1px solid; border-radius: 6px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; text-align: center" data-base="width: 100%; height: 50px; border: 1px solid; border-radius: 6px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; text-align: center" data-h="r.chk"><span>escalation check</span><span style="font-size: 10px; opacity: 0.85">deterministic</span></span>
+<span style="font-size: 10px; padding: 6px 0" data-base="font-size: 10px; padding: 6px 0" data-h="r.fail">fail → retry on large ↗</span>
+</div>
+<div style="display: flex; flex-direction: column; align-items: center">
+<span style="width: 1px; height: 14px; background: #3A3F47"></span>
+<span style="font-size: 10px; padding: 4px 0; color: #8B9099">score ≥ 0.5</span>
+<span class="node" style="width: 100%; height: 44px; border: 1px solid; border-radius: 6px; display: flex; align-items: center; justify-content: center" data-base="width: 100%; height: 44px; border: 1px solid; border-radius: 6px; display: flex; align-items: center; justify-content: center" data-h="r.lg">large model</span>
+</div>
+</div>
+<span style="width: 50%; height: 1px; background: #3A3F47; margin-top: 6px"></span>
+<span style="width: 1px; height: 14px; background: #3A3F47"></span>
+<span class="node" style="width: 100%; max-width: 280px; height: 50px; border: 1px solid; border-radius: 6px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px" data-base="width: 100%; max-width: 280px; height: 50px; border: 1px solid; border-radius: 6px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px" data-h="r.resp"><span>response</span><span style="font-size: 10px; opacity: 0.85">+ tier, cost, decision log</span></span>
+</div>
+<div style="display: flex; flex-direction: column">
+<button type="button" data-story="3-0" data-click="p3s0" class="step" style="text-align: left; background: transparent; border: none; border-top: 1px solid #2A2E35; padding: 28px 0 56px; display: flex; flex-direction: column; gap: 10px; color: inherit" data-base="text-align: left; background: transparent; border: none; border-top: 1px solid #2A2E35; padding: 28px 0 56px; display: flex; flex-direction: column; gap: 10px; color: inherit" data-h="t3.a"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.08em" data-base="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.08em" data-h="t3.na">01 — COMPUTE</span><span style="font-size: 24px; font-weight: 500; letter-spacing: -0.02em">Don't let the small model guess maths.</span><span style="font-size: 16px; line-height: 1.65">Small models answer arithmetic, letter-counting and primality questions fluently and wrongly. Instead the small model writes one Python expression and a whitelisted, sandboxed evaluator computes it: 23/40 → 40/40 correct on held-out questions.</span><span class="note r" style="font-size: 20px">that's 17 answers fixed by not guessing</span></button>
+<button type="button" data-story="3-1" data-click="p3s1" class="step" style="text-align: left; background: transparent; border: none; border-top: 1px solid #2A2E35; padding: 28px 0 56px; display: flex; flex-direction: column; gap: 10px; color: inherit" data-base="text-align: left; background: transparent; border: none; border-top: 1px solid #2A2E35; padding: 28px 0 56px; display: flex; flex-direction: column; gap: 10px; color: inherit" data-h="t3.b"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.08em" data-base="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.08em" data-h="t3.nb">02 — ROUTE</span><span style="font-family: inherit; font-size: 24px; font-weight: 500; letter-spacing: -0.02em">Learned from outcomes, still explainable.</span><span style="font-size: 16px; line-height: 1.65">Cheap, readable features feed an additive model — boosted trees, one feature each — trained on how much the large model actually helped. It ships as an 8 KB JSON file and every decision splits into per-feature contributions.</span></button>
+<button type="button" data-story="3-2" data-click="p3s2" class="step" style="text-align: left; background: transparent; border: none; border-top: 1px solid #2A2E35; padding: 28px 0 56px; display: flex; flex-direction: column; gap: 10px; color: inherit" data-base="text-align: left; background: transparent; border: none; border-top: 1px solid #2A2E35; padding: 28px 0 56px; display: flex; flex-direction: column; gap: 10px; color: inherit" data-h="t3.c"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.08em" data-base="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.08em" data-h="t3.nc">03 — ESCALATE</span><span style="font-size: 24px; font-weight: 500; letter-spacing: -0.02em">A safety net, not a second LLM call.</span><span style="font-size: 16px; line-height: 1.65">Structural checks retry a cheap answer on the large model when it is empty, refused, cut off, hedging or missing requested code. It can't catch a confidently wrong answer — which is why step 01 exists.</span></button>
+<button type="button" data-story="3-3" data-click="p3s3" class="step" style="text-align: left; background: transparent; border: none; border-top: 1px solid #2A2E35; padding: 28px 0 32px; display: flex; flex-direction: column; gap: 10px; color: inherit" data-base="text-align: left; background: transparent; border: none; border-top: 1px solid #2A2E35; padding: 28px 0 32px; display: flex; flex-direction: column; gap: 10px; color: inherit" data-h="t3.d"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.08em" data-base="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.08em" data-h="t3.nd">04 — MEASURE</span><span style="font-size: 24px; font-weight: 500; letter-spacing: -0.02em">Every number with its sample size.</span><span style="font-size: 16px; line-height: 1.65">Offline replay on 6,637 graded prompts per model pair, held-out model pairs, and a live test of 200 questions checked by code rather than an AI grader. The live test exposed the open problem; training on the pair's own traffic is what moved it.</span></button>
+</div>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(360px, 100%), 1fr)); gap: 20px">
+<div style="border: 1px solid #23262B; border-radius: 10px; background: #0F1114; padding: 24px; display: flex; flex-direction: column; gap: 14px" data-base="border: 1px solid #23262B; border-radius: 10px; background: #0F1114; padding: 24px; display: flex; flex-direction: column; gap: 14px" data-h="r.panel">
+<span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #8B9099">results so far</span>
+<div style="display: flex; flex-direction: column; border-top: 1px solid #1F2227; font-size: 14px; line-height: 1.55">
+<div style="display: grid; grid-template-columns: 112px 1fr; gap: 14px; padding: 13px 0; border-bottom: 1px solid #1F2227"><span style="font-family: 'Geist Mono', monospace; font-size: 20px; color: #E8E9EB">40/40</span><span><span style="color: #E8E9EB">Exact answers with the calculator</span>, up from 23/40 — 40 held-out questions.</span></div>
+<div style="display: grid; grid-template-columns: 112px 1fr; gap: 14px; padding: 13px 0; border-bottom: 1px solid #1F2227"><span style="font-family: 'Geist Mono', monospace; font-size: 20px; color: #E8E9EB">5 of 6</span><span><span style="color: #E8E9EB">Unseen model pairs</span> where the outcome router beat the first router offline (APGR 0.645 vs 0.597; random = 0.5) — 6,637 graded prompts per pair.</span></div>
+<div style="display: grid; grid-template-columns: 112px 1fr; gap: 14px; padding: 13px 0; border-bottom: 1px solid #1F2227"><span style="font-family: 'Geist Mono', monospace; font-size: 20px; color: #E6A75B">≈ random</span><span><span style="color: #E8E9EB">Live, on a new model pair</span>, no router beat random routing — 200 code-checked questions. Which questions gain from the big model depends on the pair. <span class="note" style="font-size: 21px">← the interesting part</span></span></div>
+<div style="display: grid; grid-template-columns: 112px 1fr; gap: 14px; padding: 13px 0; border-bottom: 1px solid #1F2227"><span style="font-family: 'Geist Mono', monospace; font-size: 20px; color: #8FE3C0">0.475 → 0.552</span><span><span style="color: #E8E9EB">Trained on 900 of that pair's own outcomes</span>, the router went from below random to clearly above it (95% interval 0.514–0.594). With half the calls on the large model it recovers 57% of the quality gap, versus 50% for random routing. Measured on the same 200 live questions as the first run, so a fresh test set is next. <span class="note" style="font-size: 21px">↑ 300 questions weren't enough — 900 were</span></span></div>
+</div>
+<span style="font-size: 13px; line-height: 1.5; color: #8B9099">Every figure comes from a script and results file in the repo, with its sample size and a 95% interval.</span>
+</div>
+<div style="border: 1px solid #23262B; border-radius: 10px; background: #0F1114; padding: 24px; display: flex; flex-direction: column; gap: 14px">
+<span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #8B9099">shipped as a service</span>
+<div style="display: flex; flex-direction: column; border-top: 1px solid #1F2227; font-size: 14px; line-height: 1.55">
+<div style="display: grid; grid-template-columns: 124px 1fr; gap: 12px; padding: 12px 0; border-bottom: 1px solid #1F2227"><span style="font-family: 'Geist Mono', monospace; font-size: 11px; color: #8B9099; padding-top: 2px">DROP-IN API</span><span>OpenAI-compatible endpoint with streaming — point any OpenAI client at it and send model="auto".</span></div>
+<div style="display: grid; grid-template-columns: 124px 1fr; gap: 12px; padding: 12px 0; border-bottom: 1px solid #1F2227"><span style="font-family: 'Geist Mono', monospace; font-size: 11px; color: #8B9099; padding-top: 2px">GUARDRAILS</span><span>Per-client cap on large-model calls and a daily spend limit.</span></div>
+<div style="display: grid; grid-template-columns: 124px 1fr; gap: 12px; padding: 12px 0; border-bottom: 1px solid #1F2227"><span style="font-family: 'Geist Mono', monospace; font-size: 11px; color: #8B9099; padding-top: 2px">OBSERVABILITY</span><span>Prometheus metrics and a per-request decision log; opt-in logging of both models' answers to learn from your own traffic.</span></div>
+<div style="display: grid; grid-template-columns: 124px 1fr; gap: 12px; padding: 12px 0; border-bottom: 1px solid #1F2227"><span style="font-family: 'Geist Mono', monospace; font-size: 11px; color: #8B9099; padding-top: 2px">PROVIDERS</span><span>7 presets — Anthropic, OpenAI, Gemini, Groq, DeepSeek, OpenRouter, local — behind one adapter layer; response cache and cost accounting.</span></div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px; font-family: 'Geist Mono', monospace; font-size: 11px; color: #A9AEB6">
+<span style="padding: 6px 10px; border: 1px solid #2A2E35; border-radius: 4px">PYTHON</span>
+<span style="padding: 6px 10px; border: 1px solid #2A2E35; border-radius: 4px">FASTAPI</span>
+<span style="padding: 6px 10px; border: 1px solid #2A2E35; border-radius: 4px">SCIKIT-LEARN</span>
+<span style="padding: 6px 10px; border: 1px solid #2A2E35; border-radius: 4px">PROMETHEUS</span>
+<span style="padding: 6px 10px; border: 1px solid #2A2E35; border-radius: 4px">DOCKER</span>
+<span style="padding: 6px 10px; border: 1px solid #2A2E35; border-radius: 4px">VERCEL</span>
+<span style="padding: 6px 10px; border: 1px solid #2A2E35; border-radius: 4px">GITHUB ACTIONS</span>
+</div>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(360px, 100%), 1fr)); gap: 32px; align-items: start">
+<div style="display: flex; flex-direction: column; gap: 8px"><span class="note" style="font-size: 30px">what broke along the way</span><span style="font-size: 15px; line-height: 1.6; color: #A9AEB6">The offline tests passed from day one. Running against real models still found these — each now fixed and covered by a test.</span></div>
+<ol style="margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 14px; font-size: 15px; line-height: 1.6; color: #C9C6BE">
+<li><span style="color: #ECEAE4">Thinking models ate the output budget</span> — a 1,024-token limit came back as a 40-token fragment.</li>
+<li><span style="color: #ECEAE4">Hidden reasoning tokens weren't billed</span>, so the large model looked about 25× cheaper than it was.</li>
+<li><span style="color: #ECEAE4">Failures looked like successes</span> — both tiers failing still returned 200 with an empty answer.</li>
+<li><span style="color: #ECEAE4">The .env file was never loaded</span>, and a stale system key silently overrode it.</li>
+</ol>
+</div>
+</section>
+
+
+<section class="wrap" style="padding-top: 112px; display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; justify-content: space-between; align-items: baseline; padding-bottom: 14px; border-bottom: 1px solid #2A2E35; font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.08em; color: #8B9099"><span>more work</span><span>MACHINE LEARNING · DEEP LEARNING · NLP</span></div>
+<div class="ann" style="justify-content: flex-start"><span class="note" style="font-size: 21px">smaller ML projects — but evaluated properly ↓</span></div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 0 40px">
+<a href="https://github.com/RachitSethi2455/smart-review-analyzer" style="padding: 24px 0; border-bottom: 1px solid #1F2227; display: flex; flex-direction: column; gap: 10px">
+<span style="display: flex; justify-content: space-between; gap: 12px; align-items: baseline"><span class="sub" style="font-size: 19px">Smart Review Analyzer</span><span style="font-family: 'Geist Mono', monospace; font-size: 11px; color: #8B9099">CODE ↗</span></span>
+<span style="font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: #8B9099">NLP · STREAMLIT · TEAM OF TWO · <span style="color: #E6A75B">IN PROGRESS</span></span>
+<span style="font-family: 'Geist Mono', monospace; font-size: 22px; color: #E8E9EB">0.899 <span style="font-size: 13px; color: #8B9099">accuracy · vs 0.699 for VADER · 25,000 IMDB test reviews</span></span>
+<span style="font-size: 14px; line-height: 1.6; color: #A9AEB6">A review analysis app: sentiment from lexicon, classical ML and transformer models, aspect-level sentiment, named entities, pros/cons summaries, and an n-gram language model written from scratch.</span>
+<span class="note r" style="font-size: 19px">the from-scratch 3-gram model hit 0.879 — not far behind</span>
+</a>
+<a href="https://github.com/RachitSethi2455/movie-genre-poster-classification" style="padding: 24px 0; border-bottom: 1px solid #1F2227; display: flex; flex-direction: column; gap: 10px">
+<span style="display: flex; justify-content: space-between; gap: 12px; align-items: baseline"><span class="sub" style="font-size: 19px">Movie Genre Prediction</span><span style="font-family: 'Geist Mono', monospace; font-size: 11px; color: #8B9099">CODE ↗</span></span>
+<span style="font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: #8B9099">DEEP LEARNING · PYTORCH · TRANSFER LEARNING</span>
+<span style="font-family: 'Geist Mono', monospace; font-size: 22px; color: #E8E9EB">69.6% <span style="font-size: 13px; color: #8B9099">± 1.2 test acc · ResNet50</span></span>
+<span style="font-size: 14px; line-height: 1.6; color: #A9AEB6">Genre from poster alone across 4 ImageNet backbones, repeated over 5 splits because one small test set is too noisy to rank models. Grad-CAM explanations, IMDb-based error analysis and a Gradio demo.</span>
+</a>
+<a href="https://github.com/RachitSethi2455/employee-attrition-prediction" style="padding: 24px 0; border-bottom: 1px solid #1F2227; display: flex; flex-direction: column; gap: 10px">
+<span style="display: flex; justify-content: space-between; gap: 12px; align-items: baseline"><span class="sub" style="font-size: 19px">Employee Attrition Prediction</span><span style="font-family: 'Geist Mono', monospace; font-size: 11px; color: #8B9099">CODE ↗</span></span>
+<span style="font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: #8B9099">MACHINE LEARNING · SCIKIT-LEARN</span>
+<span style="font-family: 'Geist Mono', monospace; font-size: 22px; color: #E8E9EB">0.852 <span style="font-size: 13px; color: #8B9099">ROC-AUC · 14,900 held-out employees</span></span>
+<span style="font-size: 14px; line-height: 1.6; color: #A9AEB6">Leak-free pipeline benchmarking six classifiers, tuned gradient boosting with calibrated probabilities, SHAP explanations, and a fairness audit with mitigation. Gradio demo included.</span>
+</a>
+</div>
+</section>
+
+<section id="experience" data-sec="experience" class="wrap" style="padding-top: 128px; display: flex; flex-direction: column; gap: 8px">
+<div style="padding-bottom: 14px; border-bottom: 1px solid #2A2E35; font-family: 'Geist Mono', monospace; font-size: 12px; color: #8B9099">experience</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 12px 40px; padding: 28px 0; border-bottom: 1px solid #1F2227">
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #8B9099">JUN 2026 — JUL 2026</span><span class="sub" style="font-size: 21px">Deloitte Consulting India Private Limited (USI)</span><span style="font-size: 15px; color: #A9AEB6">AI &amp; Data Intern · Gurugram</span></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><span style="font-size: 15px; line-height: 1.65; color: #A9AEB6">Contributed to an enterprise Agentic AI engagement, on the Adverse Event Management agent — implementation planning across the build phases, plus technical documentation and implementation guides for handoff.</span><a href="#p01" style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #8FE3C0">Read case study ↑</a><span class="note r" style="font-size: 20px">the full story is up top</span></div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 12px 40px; padding: 28px 0; border-bottom: 1px solid #1F2227">
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #8B9099">MAY 2025 — JUL 2025</span><span class="sub" style="font-size: 21px">Picraft Technology Private Limited</span><span style="font-size: 15px; color: #A9AEB6">Web Development Intern · Remote</span></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><span style="font-size: 15px; line-height: 1.65; color: #A9AEB6">Java web development — backend logic, MySQL integration and Bootstrap-based UI improvements, collaborating through GitHub.</span></div>
+</div>
+</section>
+
+<section id="about" data-sec="about" class="wrap" style="padding-top: 128px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(360px, 100%), 1fr)); gap: 48px">
+<div style="display: flex; flex-direction: column; gap: 20px">
+<span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #8B9099">about</span>
+<div style="display: flex; gap: 24px; align-items: flex-start; flex-wrap: wrap"><img src="data:image/jpeg;base64,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" alt="Rachit Sethi" width="132" height="160" style="flex: none; width: 132px; height: 160px; object-fit: cover; border: 1px solid #2A2E35; border-radius: 6px; transform: rotate(-1.5deg)">
+<p style="margin: 0; flex: 1 1 280px; font-size: 22px; line-height: 1.5; letter-spacing: -0.01em">I'm a final-year CS student specialising in AI/ML. I like building things where models, retrieval, backend services and apps have to work together — and finding out where they break. My first internship was Java web development; at Deloitte I worked on an agentic AI system.</p></div>
+<div style="margin-top: 12px; border-top: 1px solid #2A2E35; padding-top: 18px; display: flex; flex-direction: column; gap: 6px">
+<span style="font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: #8B9099">EDUCATION</span>
+<span style="font-size: 17px; font-weight: 500">UPES, Dehradun</span>
+<span style="font-size: 15px; color: #A9AEB6">B.Tech Computer Science Engineering — AI/ML · 2023–2027 · CGPA 7.88 / 10</span>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)); gap: 0 32px; align-content: start">
+<div style="padding: 16px 0; border-top: 1px solid #2A2E35; display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: #8FE3C0">LLM &amp; AGENTIC AI <span class="note" style="font-size: 19px; letter-spacing: 0; margin-left: 6px">← what I want to do more of</span></span><span style="font-size: 14px; line-height: 1.8; color: #C9CDD3">Claude API · Prompt engineering · RAG · Embeddings &amp; vector search · Agentic workflows · Tool orchestration · MCP · Guardrails · LLM-as-judge evaluation · Model routing · Cost/latency optimisation</span></div>
+<div style="padding: 16px 0; border-top: 1px solid #2A2E35; display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: #8B9099">ML &amp; DEEP LEARNING</span><span style="font-size: 14px; line-height: 1.8; color: #C9CDD3">PyTorch · TensorFlow/Keras · scikit-learn · NumPy · Pandas · OpenCV · YOLOv8 · CNNs · Sequence &amp; attention models</span></div>
+<div style="padding: 16px 0; border-top: 1px solid #2A2E35; display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: #8B9099">LANGUAGES &amp; BACKEND</span><span style="font-size: 14px; line-height: 1.8; color: #C9CDD3">Python · Java · SQL · FastAPI · REST APIs · Spring Boot · Servlets · JSP · JDBC</span></div>
+<div style="padding: 16px 0; border-top: 1px solid #2A2E35; display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: #8B9099">DATA &amp; DEVOPS</span><span style="font-size: 14px; line-height: 1.8; color: #C9CDD3">MySQL · Redis · Docker · Git/GitHub · Maven · Jupyter</span></div>
+</div>
+</section>
+
+<section id="contact" data-sec="contact" style="margin-top: 144px; border-top: 1px solid #1F2227; padding: 112px 0 64px">
+<div class="wrap" style="display: flex; flex-direction: column; gap: 28px">
+<span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #8B9099">contact</span>
+<h2 style="margin: 0; font-size: clamp(40px, 7vw, 88px); line-height: 1; font-weight: 500; letter-spacing: -0.04em">Say hi. <span class="note" style="font-size: 0.5em; vertical-align: middle; color: #8FE3C0">let's build something intelligent</span></h2>
+<p style="margin: 0; max-width: 560px; font-size: 18px; line-height: 1.6; color: #A9AEB6">Working on AI systems, RAG, agentic AI or backend engineering — or building something useful? Email is the quickest way to reach me.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<a href="mailto:rachitsethi2455@gmail.com" style="height: 48px; padding: 0 24px; display: flex; align-items: center; background: #E8E9EB; color: #0A0B0D; border-radius: 6px; font-weight: 500; font-size: 15px">Email</a>
+<a href="https://github.com/RachitSethi2455" style="height: 48px; padding: 0 24px; display: flex; align-items: center; border: 1px solid #2A2E35; border-radius: 6px; font-size: 15px">GitHub ↗</a>
+<a href="https://www.linkedin.com/in/rachit-sethi-2455d" style="height: 48px; padding: 0 24px; display: flex; align-items: center; border: 1px solid #2A2E35; border-radius: 6px; font-size: 15px">LinkedIn ↗</a>
+</div>
+<div style="margin-top: 72px; padding-top: 20px; border-top: 1px solid #1F2227; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-family: 'Geist Mono', monospace; font-size: 11px; color: #8B9099"><span>built by Rachit, with a lot of diagrams</span><a href="#top" style="color: #8B9099">BACK TO TOP ↑</a></div>
+</div>
+</section>
+</div>
+
+
+<script>
+(function () {
+  var inst;
+  function get(obj, path) { return path.split('.').reduce(function (o, k) { return o == null ? o : o[k]; }, obj); }
+  function apply() {
+    var v = inst.renderVals();
+    document.querySelectorAll('[data-h]').forEach(function (el) {
+      var extra = get(v, el.getAttribute('data-h')) || '';
+      var base = el.getAttribute('data-base');
+      el.setAttribute('style', base && extra ? base + '; ' + extra : (base || extra));
+    });
+    document.querySelectorAll('[data-t]').forEach(function (el) {
+      var t = get(v, el.getAttribute('data-t'));
+      el.textContent = t == null ? '' : String(t);
+    });
+    inst._vals = v;
+  }
+  window.DCLogic = class {
+    constructor(props) { this.props = props || {}; this.state = {}; }
+    setState(u) { Object.assign(this.state, typeof u === 'function' ? u(this.state) : u); if (inst) apply(); }
+    forceUpdate() { if (inst) apply(); }
+  };
+  
+class Component extends DCLogic {
+constructor(props) {
+super(props);
+this.state = { s1: 0, s2: 0, s3: 0, hov: '', sec: 'work' };
+}
+componentDidMount() {
+this._onScroll = () => {
+if (this._raf) return;
+this._raf = requestAnimationFrame(() => { this._raf = 0; this.syncScroll(); });
+};
+try {
+document.addEventListener('scroll', this._onScroll, true);
+window.addEventListener('resize', this._onScroll);
+} catch (err) {}
+this._t1 = setTimeout(this._onScroll, 300);
+this._t2 = setTimeout(this._onScroll, 1200);
+}
+syncScroll() {
+try {
+const vh = window.innerHeight || document.documentElement.clientHeight || 800;
+const mid = vh * 0.5;
+const upd = {};
+const best = {};
+document.querySelectorAll('[data-story]').forEach((el) => {
+const parts = (el.getAttribute('data-story') || '').split('-');
+if (el.getBoundingClientRect().top <= mid) best['s' + parts[0]] = Number(parts[1]);
+});
+Object.keys(best).forEach((k) => { if (this.state[k] !== best[k]) upd[k] = best[k]; });
+let sec = 'work';
+document.querySelectorAll('[data-sec]').forEach((el) => {
+if (el.getBoundingClientRect().top <= mid) sec = el.getAttribute('data-sec');
+});
+if (sec !== this.state.sec) upd.sec = sec;
+if (Object.keys(upd).length) this.setState(upd);
+} catch (err) {}
+}
+componentWillUnmount() {
+try {
+document.removeEventListener('scroll', this._onScroll, true);
+window.removeEventListener('resize', this._onScroll);
+clearTimeout(this._t1); clearTimeout(this._t2);
+if (this._raf) cancelAnimationFrame(this._raf);
+} catch (err) {}
+}
+renderVals() {
+const st = this.state;
+const ON = 'border-color: #8FE3C0; background: rgba(143,227,192,0.08); color: #E8E9EB';
+const OFF = 'border-color: #2A2E35; background: #0F1114; color: #9AA0A8';
+const on = (c) => (c ? ON : OFF);
+const amb = (c) => (c ? 'border-color: #E6A75B; color: #E6A75B' : 'border-color: #3A3F47; color: #8B9099');
+const step = (c) => (c ? 'color: #E8E9EB; border-top-color: #8FE3C0' : 'color: #7A808A');
+const num = (c) => (c ? 'color: #8FE3C0' : 'color: #7A808A');
+const texts = (s) => ({ a: step(s === 0), b: step(s === 1), c: step(s === 2), d: step(s === 3), na: num(s === 0), nb: num(s === 1), nc: num(s === 2), nd: num(s === 3) });
+const s1 = st.s1, s2 = st.s2, s3 = st.s3;
+const navOn = (k) => (st.sec === k ? 'color: #E8E9EB' : 'color: #8B9099');
+const laneOn = (k) => (st.hov === k ? 'border-color: #8FE3C0; background: rgba(143,227,192,0.05)' : '');
+const set = (k, v) => () => this.setState({ [k]: v });
+return {
+nav: { work: navOn('work'), experience: navOn('experience'), about: navOn('about'), contact: navOn('contact') },
+lane: { a: laneOn('a'), b: laneOn('b'), c: laneOn('c') },
+hoverA: set('hov', 'a'), hoverB: set('hov', 'b'), hoverC: set('hov', 'c'), hoverOff: set('hov', ''),
+s1n: s1 + 1,
+d: {
+rep: on(s1 === 0), wf: on(s1 === 0), cid: on(s1 === 1),
+dec: s1 === 1 ? 'background: #8FE3C0; color: #0A0B0D' : 'background: #23262B; color: #A9AEB6',
+yes: s1 >= 1 && s1 <= 2 ? 'color: #8FE3C0' : 'color: #8B9099',
+kb: on(s1 === 2), info: on(s1 === 2), enr: on(s1 === 2),
+retry: amb(s1 === 3), hitl: on(s1 === 3), out: on(s1 === 3)
+},
+c: {
+q: on(s2 === 0), qp: on(s2 === 0), corp: on(s2 === 1), ret: on(s2 === 1),
+ctx: on(s2 === 2), llm: on(s2 === 2), resp: on(s2 === 3)
+},
+r: {
+q: on(s3 === 0), dec: s3 === 0 ? 'background: #8FE3C0; color: #0A0B0D' : 'background: #23262B; color: #A9AEB6',
+calc: amb(s3 === 0), fe: on(s3 === 1), ro: on(s3 === 1), sm: on(s3 === 1 || s3 === 2), lg: on(s3 === 1),
+chk: amb(s3 === 2), fail: s3 === 2 ? 'color: #E6A75B' : 'color: #8B9099', resp: on(s3 === 3),
+panel: s3 === 3 ? 'border-color: #3A3F47' : ''
+},
+t1: texts(s1), t2: texts(s2), t3: texts(s3),
+p1s0: set('s1', 0), p1s1: set('s1', 1), p1s2: set('s1', 2), p1s3: set('s1', 3),
+p2s0: set('s2', 0), p2s1: set('s2', 1), p2s2: set('s2', 2), p2s3: set('s2', 3),
+p3s0: set('s3', 0), p3s1: set('s3', 1), p3s2: set('s3', 2), p3s3: set('s3', 3)
+};
+}
+}
+
+  inst = new Component({});
+  apply();
+  function bind(attr, evt) {
+    document.addEventListener(evt, function (e) {
+      var el = e.target.closest && e.target.closest('[' + attr + ']');
+      if (!el) return;
+      var fn = get(inst._vals, el.getAttribute(attr));
+      if (typeof fn === 'function') fn(e);
+    }, evt === 'mouseover' || evt === 'mouseout');
+  }
+  bind('data-click', 'click');
+  document.querySelectorAll('[data-enter]').forEach(function (el) {
+    el.addEventListener('mouseenter', function (e) { var fn = get(inst._vals, el.getAttribute('data-enter')); if (fn) fn(e); });
+    el.addEventListener('focus', function (e) { var fn = get(inst._vals, el.getAttribute('data-enter')); if (fn) fn(e); });
+  });
+  document.querySelectorAll('[data-leave]').forEach(function (el) {
+    el.addEventListener('mouseleave', function (e) { var fn = get(inst._vals, el.getAttribute('data-leave')); if (fn) fn(e); });
+    el.addEventListener('blur', function (e) { var fn = get(inst._vals, el.getAttribute('data-leave')); if (fn) fn(e); });
+  });
+  if (inst.componentDidMount) inst.componentDidMount();
+})();
+</script>
+
+</body>
+</html>
